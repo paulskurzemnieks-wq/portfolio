@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selected Work — realpaulzy</title>
+<meta name="description" content="Cinematic commercial work — hospitality, lifestyle and real estate. Directed, shot and cut by Pauls Kurzemnieks, Riga.">
+<meta property="og:title" content="Selected Work — realpaulzy">
+<meta property="og:description" content="Cinematic commercial work — hospitality, lifestyle and real estate.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --bg-elev: #F7F7F5;
+    --ink: #111111;
+    --ink-soft: rgba(0,0,0,0.81);
+    --muted: rgba(0,0,0,0.55);
+    --line: #EAEAEA;
+    --line-strong: #CFCFCF;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B0B0B; --bg-elev: #131313;
+      --ink: #F5F5F5; --ink-soft: rgba(255,255,255,0.85); --muted: rgba(255,255,255,0.55);
+      --line: #1E1E1E; --line-strong: #333333;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B0B0B; --bg-elev: #131313;
+    --ink: #F5F5F5; --ink-soft: rgba(255,255,255,0.85); --muted: rgba(255,255,255,0.55);
+    --line: #1E1E1E; --line-strong: #333333;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: var(--sans); font-size: 15px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  img { max-width: 100%; display: block; }
+  [hidden] { display: none !important; }
+
+  .nav {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+    background: color-mix(in oklab, var(--bg) 92%, transparent);
+    backdrop-filter: saturate(1.2) blur(10px);
+    -webkit-backdrop-filter: saturate(1.2) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner { max-width: 1440px; margin: 0 auto; padding: 18px 28px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { font-weight: 800; font-size: 20px; letter-spacing: -0.02em;
+    color: var(--ink); text-decoration: none; }
+  .nav-links { display: flex; gap: 26px; list-style: none; padding: 0; margin: 0; }
+  .nav-links a { color: var(--ink-soft); text-decoration: none;
+    font-size: 13px; letter-spacing: 0.02em; padding: 4px 0;
+    border-bottom: 1px solid transparent; transition: border-color .2s, color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--ink); border-bottom-color: var(--ink); }
+
+  .wrap { max-width: 1440px; margin: 0 auto; padding-inline: 28px; padding-block: 64px 96px; }
+
+  .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted);
+    display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--ink); }
+
+  .headline-row { display: grid; grid-template-columns: 1fr 320px; gap: 40px;
+    align-items: end; margin-bottom: 40px; }
+  h1.title { font-weight: 800; font-size: clamp(48px, 7.5vw, 96px);
+    line-height: 0.98; letter-spacing: -0.035em; margin: 0; text-wrap: balance; }
+  h1.title em { font-style: normal; color: var(--muted); font-weight: 800; }
+  .subhead { color: var(--muted); font-size: 14px; line-height: 1.55;
+    max-width: 32ch; justify-self: end; margin: 0; }
+
+  .brands { margin: 0 0 56px; padding: 28px 0 32px;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .brands-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 24px; }
+  .brands-row { display: flex; flex-wrap: wrap; justify-content: center;
+    align-items: center; gap: 32px 48px; }
+  .brand-logo { font-weight: 700; font-size: 15px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-soft); opacity: 0.85;
+    transition: opacity .2s; }
+  .brand-logo:hover { opacity: 1; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 24px;
+    border-bottom: 1px solid var(--line); margin-bottom: 40px; }
+  .chip { font: 500 12px/1 var(--sans); letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--ink-soft); background: transparent;
+    border: 1px solid var(--line-strong); border-radius: 999px;
+    padding: 10px 16px; cursor: pointer;
+    transition: background .18s, color .18s, border-color .18s; }
+  .chip:hover { border-color: var(--ink); color: var(--ink); }
+  .chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .count { margin-left: auto; align-self: center; font: 400 12px var(--mono);
+    color: var(--muted); letter-spacing: 0.06em; }
+
+  .featured-wrap { margin-bottom: 72px; }
+  .featured { position: relative; width: 100%; aspect-ratio: 21 / 9;
+    border-radius: 4px; overflow: hidden; cursor: pointer; isolation: isolate;
+    background: #111; }
+  .featured .scene, .featured video, .featured img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .featured .cine-bar { position: absolute; left: 0; right: 0; height: 6%;
+    background: #000; z-index: 2; }
+  .featured .cine-bar.top { top: 0; } .featured .cine-bar.bottom { bottom: 0; }
+  .featured .veil { position: absolute; inset: 0; z-index: 3;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.55) 100%); }
+  .featured .meta { position: absolute; left: 24px; right: 24px; bottom: 20px;
+    display: flex; align-items: flex-end; justify-content: space-between;
+    color: #F5F5F5; z-index: 4; }
+  .featured .kicker { font: 500 11px var(--mono); letter-spacing: 0.16em;
+    text-transform: uppercase; opacity: 0.85; margin-bottom: 6px; }
+  .featured .name { font-weight: 800; font-size: clamp(26px, 3.6vw, 40px);
+    line-height: 1; letter-spacing: -0.025em; }
+  .featured .duration { font: 500 11px var(--mono); letter-spacing: 0.12em;
+    text-transform: uppercase; opacity: 0.85; }
+  .featured-caption { display: flex; justify-content: space-between;
+    align-items: baseline; padding: 12px 4px 0; color: var(--muted);
+    font-size: 12px; letter-spacing: 0.04em; }
+  .featured-caption .fc-name { color: var(--ink); font-weight: 700;
+    font-size: 14px; letter-spacing: -0.01em; }
+
+  .grid { column-count: 3; column-gap: 24px; }
+  @media (max-width: 1024px) { .grid { column-count: 2; } }
+  @media (max-width: 560px)  { .grid { column-count: 1; } }
+
+  .tile { break-inside: avoid; margin-bottom: 40px; display: block; }
+  .tile-media { position: relative; width: 100%; border-radius: 3px;
+    overflow: hidden; cursor: pointer; isolation: isolate; background: #111; }
+  .tile-media[data-ratio="21-9"] { aspect-ratio: 21/9; }
+  .tile-media[data-ratio="16-9"] { aspect-ratio: 16/9; }
+  .tile-media[data-ratio="3-2"]  { aspect-ratio: 3/2; }
+  .tile-media[data-ratio="4-5"]  { aspect-ratio: 4/5; }
+  .tile-media[data-ratio="1-1"]  { aspect-ratio: 1/1; }
+  .tile-media[data-ratio="2-3"]  { aspect-ratio: 2/3; }
+  .tile-media[data-ratio="3-4"]  { aspect-ratio: 3/4; }
+  .tile-media[data-ratio="9-16"] { aspect-ratio: 9/16; }
+  .tile-media video, .tile-media img, .tile-media .scene {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .tile-media .veil { position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.35) 100%);
+    opacity: 0; transition: opacity .3s; }
+  .tile-media:hover .veil { opacity: 1; }
+  .tile-media .format { position: absolute; top: 10px; right: 10px; z-index: 3;
+    font: 500 10px var(--mono); letter-spacing: 0.12em; text-transform: uppercase;
+    color: #F5F5F5; background: rgba(0,0,0,0.35); backdrop-filter: blur(4px);
+    padding: 4px 8px; border-radius: 2px; }
+  .tile-media .play { position: absolute; inset: 0; display: grid; place-items: center;
+    z-index: 3; opacity: 0; transition: opacity .3s; }
+  .tile-media:hover .play { opacity: 1; }
+  .tile-media .play svg { width: 46px; height: 46px;
+    filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5)); }
+  .cine::before, .cine::after { content: ""; position: absolute; left: 0; right: 0;
+    height: 6%; background: #000; z-index: 2; }
+  .cine::before { top: 0; } .cine::after  { bottom: 0; }
+
+  .caption { padding: 14px 2px 0; display: flex; justify-content: space-between;
+    align-items: baseline; gap: 12px; }
+  .caption .name { font-weight: 700; font-size: 12px; line-height: 1.2;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+  .caption .meta { font: 400 11px/1.3 var(--sans); color: var(--muted);
+    letter-spacing: 0.04em; text-align: right; }
+  .caption .cat { display: inline-block; margin-top: 4px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-soft); }
+
+  .cta { margin-top: 80px; text-align: center; padding: 64px 24px; }
+  .cta h2 { font-weight: 800; font-size: clamp(32px, 4.5vw, 56px);
+    line-height: 1; letter-spacing: -0.035em; margin: 0 0 20px; }
+  .cta h2 em { font-style: normal; color: var(--muted); font-weight: 800; }
+  .cta p { max-width: 44ch; margin: 0 auto 32px; color: var(--muted);
+    font-size: 14px; line-height: 1.55; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 12px;
+    padding: 18px 28px; border: 1px solid var(--ink); background: var(--ink);
+    color: var(--bg); font-weight: 600; font-size: 12px;
+    letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+    border-radius: 999px; transition: transform .2s; }
+  .cta-btn:hover { transform: translateY(-2px); }
+  .cta-btn svg { width: 14px; height: 14px; }
+
+  .lb { position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.94);
+    display: none; place-items: center; padding: 32px; }
+  .lb.open { display: grid; }
+  .lb-inner { max-width: 1400px; max-height: 90vh; width: 100%; position: relative; }
+  .lb video, .lb img { width: 100%; height: auto; max-height: 88vh;
+    display: block; margin: 0 auto; background: #000; }
+  .lb-close { position: absolute; top: -40px; right: 0; background: transparent;
+    border: 0; color: #fff; font-size: 28px; cursor: pointer; line-height: 1; }
+  .lb-nav { position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.1); border: 0; color: #fff; font-size: 24px;
+    width: 48px; height: 48px; border-radius: 999px; cursor: pointer;
+    display: grid; place-items: center; }
+  .lb-prev { left: -60px; } .lb-next { right: -60px; }
+  @media (max-width: 900px) { .lb-prev { left: 8px; } .lb-next { right: 8px; } }
+
+  .foot { border-top: 1px solid var(--line); padding: 40px 28px;
+    max-width: 1440px; margin: 0 auto; display: flex; justify-content: space-between;
+    align-items: center; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+  .foot a { color: var(--ink-soft); text-decoration: none; }
+  .foot a:hover { color: var(--ink); }
+  .foot-links { display: flex; gap: 20px; }
+
+  @media (max-width: 720px) {
+    .wrap { padding-inline: 20px; padding-block: 44px 72px; }
+    .headline-row { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+    .subhead { justify-self: start; }
+    .nav-inner { padding: 14px 20px; }
+    .nav-links { gap: 18px; } .nav-links a { font-size: 12px; }
+    .count { display: none; } .brand { font-size: 18px; }
+    .foot { flex-direction: column; text-align: center; }
+  }
+
+  .scene { background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 3px 3px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="https://realpaulzy.com/" class="brand">realpaulzy</a>
+    <ul class="nav-links">
+      <li><a href="https://realpaulzy.com/">Home</a></li>
+      <li><a href="https://realpaulzy.com/collections/all">Shop</a></li>
+      <li><a href="#" class="active">Work</a></li>
+      <li><a href="https://realpaulzy.com/pages/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div class="eyebrow"><span class="dot"></span><span>01 / Work</span></div>
+
+  <div class="headline-row">
+    <h1 class="title">Selected work<em>.</em></h1>
+    <p class="subhead">Cinematic commercial work — hospitality, lifestyle and real estate. Directed, shot and cut by Pauls Kurzemnieks, Riga.</p>
+  </div>
+
+  <section class="brands">
+    <div class="brands-label">Brands created for</div>
+    <div class="brands-row">
+      <span class="brand-logo">WESS Select</span>
+      <span class="brand-logo">myfitness</span>
+      <span class="brand-logo">Pie&nbsp;galda!</span>
+      <span class="brand-logo">Enliven</span>
+      <span class="brand-logo">Compensa</span>
+      <span class="brand-logo">Ring Baltic</span>
+      <span class="brand-logo">TAPT</span>
+      <span class="brand-logo">Verum</span>
+      <span class="brand-logo">LemonGym</span>
+      <span class="brand-logo">Toyota</span>
+      <span class="brand-logo">Volburg</span>
+    </div>
+  </section>
+
+  <div class="filters" id="filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="hospitality">Hospitality</button>
+    <button class="chip" data-filter="real-estate">Real&nbsp;Estate</button>
+    <button class="chip" data-filter="lifestyle">Lifestyle</button>
+    <button class="chip" data-filter="travel">Travel</button>
+    <button class="chip" data-filter="brand">Brand&nbsp;Story</button>
+    <span class="count" id="count">12 projects</span>
+  </div>
+
+  <div class="featured-wrap" data-industry="travel">
+    <div class="featured cine" data-media="" data-kind="image">
+      <div class="scene" style="background:
+        radial-gradient(120% 80% at 20% 30%, #4E6D7A 0%, transparent 50%),
+        radial-gradient(90% 70% at 80% 60%, #2A3E4A 0%, transparent 55%),
+        linear-gradient(180deg, #6D8794 0%, #3A4E5A 45%, #1B2731 100%);
+        box-shadow: inset 0 0 120px rgba(0,0,0,0.55);"></div>
+      <div class="veil"></div>
+      <div class="meta">
+        <div>
+          <div class="kicker">Featured · 2026</div>
+          <div class="name">Norway — Lofoten &amp; Fjords</div>
+        </div>
+        <div class="duration">02:14 · 21:9 · FX3</div>
+      </div>
+    </div>
+    <div class="featured-caption">
+      <span class="fc-name">Norway — Lofoten &amp; Fjords</span>
+      <span>Personal · Aerial &amp; Cinematic B-Roll</span>
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <article class="tile" data-industry="real-estate">
+      <div class="tile-media cine" data-ratio="16-9" data-kind="video" data-media="https://realpaulzy.com/cdn/shop/videos/c/vp/4fabee14d8b447a68e655c12e4cb283d/4fabee14d8b447a68e655c12e4cb283d.HD-1080p-7.2Mbps-80103822.mp4?v=0">
+        <video src="https://realpaulzy.com/cdn/shop/videos/c/vp/4fabee14d8b447a68e655c12e4cb283d/4fabee14d8b447a68e655c12e4cb283d.HD-1080p-7.2Mbps-80103822.mp4?v=0" muted loop playsinline preload="metadata" poster="https://realpaulzy.com/cdn/shop/files/preview_images/4fabee14d8b447a68e655c12e4cb283d.thumbnail.0000000000_2500x.jpg?v=1775112642"></video>
+        <span class="format">Video · 01:35</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Marbella Villas</span><span class="meta">Costa del Sol<br><span class="cat">Real Estate</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="real-estate">
+      <div class="tile-media" data-ratio="9-16" data-kind="video" data-media="https://realpaulzy.com/cdn/shop/videos/c/vp/e343f8e1b234409c80a48f3992e2126c/e343f8e1b234409c80a48f3992e2126c.HD-1080p-7.2Mbps-66800810.mp4?v=0">
+        <video src="https://realpaulzy.com/cdn/shop/videos/c/vp/e343f8e1b234409c80a48f3992e2126c/e343f8e1b234409c80a48f3992e2126c.HD-1080p-7.2Mbps-66800810.mp4?v=0" muted loop playsinline preload="metadata" poster="https://realpaulzy.com/cdn/shop/files/preview_images/e343f8e1b234409c80a48f3992e2126c.thumbnail.0000000000_2500x.jpg?v=1768207117"></video>
+        <span class="format">Reel · 00:42</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Villa Aerials</span><span class="meta">Marbella<br><span class="cat">Real Estate</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="real-estate">
+      <div class="tile-media" data-ratio="1-1" data-kind="video" data-media="https://realpaulzy.com/cdn/shop/videos/c/vp/b31bc5ab481f4cdf92053af662a7481e/b31bc5ab481f4cdf92053af662a7481e.HD-1080p-7.2Mbps-66801898.mp4?v=0">
+        <video src="https://realpaulzy.com/cdn/shop/videos/c/vp/b31bc5ab481f4cdf92053af662a7481e/b31bc5ab481f4cdf92053af662a7481e.HD-1080p-7.2Mbps-66801898.mp4?v=0" muted loop playsinline preload="metadata" poster="https://realpaulzy.com/cdn/shop/files/preview_images/b31bc5ab481f4cdf92053af662a7481e.thumbnail.0000000000_2500x.jpg?v=1768208383"></video>
+        <span class="format">Reel · 00:38</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Estate Series</span><span class="meta">Costa del Sol<br><span class="cat">Real Estate</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="real-estate">
+      <div class="tile-media" data-ratio="9-16" data-kind="video" data-media="https://realpaulzy.com/cdn/shop/videos/c/vp/f949d08dfb1444eebdffa7ac09716622/f949d08dfb1444eebdffa7ac09716622.HD-1080p-7.2Mbps-66802577.mp4?v=0">
+        <video src="https://realpaulzy.com/cdn/shop/videos/c/vp/f949d08dfb1444eebdffa7ac09716622/f949d08dfb1444eebdffa7ac09716622.HD-1080p-7.2Mbps-66802577.mp4?v=0" muted loop playsinline preload="metadata" poster="https://realpaulzy.com/cdn/shop/files/preview_images/f949d08dfb1444eebdffa7ac09716622.thumbnail.0000000000_2500x.jpg?v=1768209272"></video>
+        <span class="format">Reel · 00:51</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Property Reel</span><span class="meta">Marbella<br><span class="cat">Real Estate</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="hospitality">
+      <div class="tile-media" data-ratio="9-16" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 60% at 40% 30%, #C8A473 0%, transparent 55%), radial-gradient(70% 50% at 70% 75%, #3E2A1A 0%, transparent 60%), linear-gradient(180deg, #D4B084 0%, #7B4F32 50%, #2A1810 100%); box-shadow: inset 0 0 70px rgba(0,0,0,0.55);"></div>
+        <span class="format">Reel · 00:42</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">TAPT</span><span class="meta">Café Series · Riga<br><span class="cat">Hospitality</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="lifestyle">
+      <div class="tile-media" data-ratio="9-16" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(80% 60% at 40% 30%, #F3E27A 0%, transparent 55%), linear-gradient(180deg, #F7E77A 0%, #A69420 55%, #1A1808 100%); box-shadow: inset 0 0 70px rgba(0,0,0,0.55);"></div>
+        <span class="format">Reel · 00:38</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">LemonGym</span><span class="meta">Riga Studios<br><span class="cat">Lifestyle</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="hospitality">
+      <div class="tile-media cine" data-ratio="16-9" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(100% 70% at 30% 40%, #6B8FA8 0%, transparent 55%), linear-gradient(180deg, #8AABC1 0%, #3E5F76 50%, #0F1E2A 100%); box-shadow: inset 0 0 90px rgba(0,0,0,0.55);"></div>
+        <span class="format">Video · 01:12</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Nordcap × Aquasports</span><span class="meta">Boat Launch<br><span class="cat">Hospitality</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="lifestyle">
+      <div class="tile-media" data-ratio="1-1" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(80% 60% at 40% 40%, #D9C6A8 0%, transparent 55%), linear-gradient(160deg, #E8D8BC 0%, #B69F7C 60%, #6E5A3F 100%); box-shadow: inset 0 0 70px rgba(0,0,0,0.35);"></div>
+        <span class="format">Campaign</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">WESS Select</span><span class="meta">SS Campaign<br><span class="cat">Lifestyle</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="lifestyle">
+      <div class="tile-media" data-ratio="1-1" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 50% 40%, #E48CB2 0%, transparent 55%), linear-gradient(160deg, #EFA3C1 0%, #A0446C 60%, #3C1428 100%); box-shadow: inset 0 0 70px rgba(0,0,0,0.45);"></div>
+        <span class="format">Reel · 00:22</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Enliven</span><span class="meta">Alfa Mall UGC<br><span class="cat">Lifestyle</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="hospitality">
+      <div class="tile-media" data-ratio="9-16" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 60% at 50% 35%, #8B2A3E 0%, transparent 55%), linear-gradient(180deg, #9A3550 0%, #4A1220 50%, #14050C 100%); box-shadow: inset 0 0 80px rgba(0,0,0,0.55);"></div>
+        <span class="format">Reel · 00:51</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Vestibul</span><span class="meta">Restaurant Story<br><span class="cat">Hospitality</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="brand">
+      <div class="tile-media" data-ratio="1-1" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 40% 40%, #4A6DB0 0%, transparent 55%), linear-gradient(160deg, #5A7EC4 0%, #263A6A 60%, #0A1024 100%); box-shadow: inset 0 0 70px rgba(0,0,0,0.45);"></div>
+        <span class="format">Brand Film · 02:04</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Compensa</span><span class="meta">Brand Film<br><span class="cat">Brand Story</span></span></div>
+    </article>
+
+    <article class="tile" data-industry="travel">
+      <div class="tile-media" data-ratio="9-16" data-kind="video" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 60% at 50% 30%, #6FD1D5 0%, transparent 55%), radial-gradient(80% 50% at 50% 85%, #ECE0C3 0%, transparent 55%), linear-gradient(180deg, #A8E8EB 0%, #4EBFB6 45%, #ECE0C3 100%); box-shadow: inset 0 0 70px rgba(0,0,0,0.35);"></div>
+        <span class="format">Aerials · 01:48</span>
+        <div class="veil"></div>
+        <div class="play"><svg viewBox="0 0 24 24" fill="#F5F5F5"><path d="M8 5v14l11-7z"/></svg></div>
+      </div>
+      <div class="caption"><span class="name">Seychelles</span><span class="meta">Praslin Aerials<br><span class="cat">Travel</span></span></div>
+    </article>
+
+  </div>
+
+  <div style="height:32px;"></div>
+  <div class="eyebrow" style="padding-top:24px;border-top:1px solid var(--line);">
+    <span class="dot"></span><span>02 / Photography</span>
+  </div>
+  <div class="headline-row" style="margin-bottom:40px;">
+    <h1 class="title" style="font-size:clamp(40px,6vw,76px);">Stills<em>.</em></h1>
+    <p class="subhead">Hospitality, editorial and architectural photography.</p>
+  </div>
+  <div class="filters" id="photo-filters">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="hospitality">Hospitality</button>
+    <button class="chip" data-filter="interiors">Interiors</button>
+    <button class="chip" data-filter="editorial">Editorial</button>
+    <button class="chip" data-filter="product">Product</button>
+    <span class="count" id="photo-count">9 photos</span>
+  </div>
+  <div class="grid" id="photo-grid" style="column-gap:20px;">
+    <article class="tile photo" data-industry="hospitality">
+      <div class="tile-media" data-ratio="3-2" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 40% 40%, #A67456 0%, transparent 55%), linear-gradient(160deg, #C08A6A 0%, #6E4028 60%, #2A140A 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Hotel Suite</span><span class="meta">Riga<br><span class="cat">Hospitality</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="interiors">
+      <div class="tile-media" data-ratio="4-5" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 50% 40%, #F0E4D0 0%, transparent 55%), linear-gradient(160deg, #EFDDC1 0%, #A88860 60%, #4E3418 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Kitchen Detail</span><span class="meta">Baltics<br><span class="cat">Interiors</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="hospitality">
+      <div class="tile-media" data-ratio="3-2" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 30% 40%, #E9C89A 0%, transparent 55%), radial-gradient(80% 60% at 80% 70%, #7B3A1E 0%, transparent 55%), linear-gradient(160deg, #EAB57C 0%, #8E4820 60%, #2A1408 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Villa Terrace</span><span class="meta">Marbella<br><span class="cat">Hospitality</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="editorial">
+      <div class="tile-media" data-ratio="4-5" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(80% 60% at 50% 35%, #3A3A3A 0%, transparent 55%), linear-gradient(160deg, #5A5A5A 0%, #2A2A2A 60%, #0E0E0E 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Editorial Portrait</span><span class="meta">Studio<br><span class="cat">Editorial</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="product">
+      <div class="tile-media" data-ratio="1-1" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 50% 40%, #E8E3D8 0%, transparent 55%), linear-gradient(160deg, #E0DACE 0%, #ADA593 60%, #5C5648 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Product Still</span><span class="meta">Studio<br><span class="cat">Product</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="hospitality">
+      <div class="tile-media" data-ratio="4-5" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 50% 40%, #7A2A38 0%, transparent 55%), linear-gradient(160deg, #8E3040 0%, #3A1218 60%, #14060A 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Bar Scene</span><span class="meta">Restaurant<br><span class="cat">Hospitality</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="interiors">
+      <div class="tile-media" data-ratio="2-3" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(80% 60% at 50% 30%, #8E9EA8 0%, transparent 55%), linear-gradient(160deg, #A8B4BE 0%, #5A6670 60%, #24282E 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Architecture</span><span class="meta">Riga<br><span class="cat">Interiors</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="editorial">
+      <div class="tile-media" data-ratio="3-2" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 50% 40%, #A8664A 0%, transparent 55%), linear-gradient(160deg, #B8785A 0%, #5C321E 60%, #1A0C06 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Editorial</span><span class="meta">Baltics<br><span class="cat">Editorial</span></span></div>
+    </article>
+    <article class="tile photo" data-industry="hospitality">
+      <div class="tile-media" data-ratio="1-1" data-kind="image" data-media="">
+        <div class="scene" style="background: radial-gradient(90% 65% at 40% 40%, #D8B896 0%, transparent 55%), linear-gradient(160deg, #E4C8A6 0%, #9A7452 60%, #4A3018 100%);"></div>
+        <span class="format">Photo</span>
+        <div class="veil"></div>
+      </div>
+      <div class="caption"><span class="name">Table Setting</span><span class="meta">Restaurant<br><span class="cat">Hospitality</span></span></div>
+    </article>
+  </div>
+
+  <section class="cta">
+    <h2>Have a brand in mind<em>?</em></h2>
+    <p>Cinematic commercial work for hospitality, lifestyle and real estate. Directed, shot and cut in Riga.</p>
+    <a href="https://realpaulzy.com/pages/contact" class="cta-btn">
+      <span>Start a project</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© 2026 realpaulzy — All rights reserved.</span>
+  <div class="foot-links">
+    <a href="https://instagram.com/realpaulzy" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://youtube.com/@realpaulzy" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://realpaulzy.com/">Store</a>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="lb-inner">
+    <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Next">›</button>
+    <div id="lb-slot"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const filters = document.getElementById('filters');
+  const grid = document.getElementById('grid');
+  const featured = document.querySelector('.featured-wrap');
+  const count = document.getElementById('count');
+  const tiles = Array.from(grid.querySelectorAll('.tile'));
+
+  function apply(cat) {
+    let visible = 0;
+    tiles.forEach(t => {
+      const match = cat === 'all' || t.dataset.industry === cat;
+      t.hidden = !match;
+      if (match) visible++;
+    });
+    if (featured) {
+      const featMatch = cat === 'all' || featured.dataset.industry === cat;
+      featured.hidden = !featMatch;
+      if (featMatch) visible++;
+    }
+    count.textContent = visible + (visible === 1 ? ' project' : ' projects');
+  }
+  filters.addEventListener('click', (e) => {
+    const btn = e.target.closest('.chip');
+    if (!btn) return;
+    filters.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    apply(btn.dataset.filter);
+  });
+
+  const pFilters = document.getElementById('photo-filters');
+  const pGrid = document.getElementById('photo-grid');
+  const pCount = document.getElementById('photo-count');
+  const photos = Array.from(pGrid.querySelectorAll('.tile'));
+  function applyPhotos(cat) {
+    let visible = 0;
+    photos.forEach(t => {
+      const match = cat === 'all' || t.dataset.industry === cat;
+      t.hidden = !match;
+      if (match) visible++;
+    });
+    pCount.textContent = visible + (visible === 1 ? ' photo' : ' photos');
+  }
+  pFilters.addEventListener('click', (e) => {
+    const btn = e.target.closest('.chip');
+    if (!btn) return;
+    pFilters.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    applyPhotos(btn.dataset.filter);
+  });
+
+  const lb = document.getElementById('lb');
+  const lbSlot = document.getElementById('lb-slot');
+  const lbClose = document.getElementById('lb-close');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+  let currentList = [];
+  let currentIdx = 0;
+
+  function openLightbox(list, idx) {
+    if (!list.length) return;
+    currentList = list;
+    currentIdx = ((idx % list.length) + list.length) % list.length;
+    const item = currentList[currentIdx];
+    lbSlot.innerHTML = '';
+    if (!item.media) {
+      const p = document.createElement('div');
+      p.style.cssText = 'color:#fff;text-align:center;padding:40px;font-family:var(--sans);';
+      p.textContent = 'Media not attached yet — add a video URL or image to this tile.';
+      lbSlot.appendChild(p);
+    } else if (item.kind === 'video') {
+      const v = document.createElement('video');
+      v.src = item.media; v.controls = true; v.autoplay = true; v.playsInline = true;
+      lbSlot.appendChild(v);
+    } else {
+      const i = document.createElement('img');
+      i.src = item.media;
+      lbSlot.appendChild(i);
+    }
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lbSlot.innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  function collectVisible(container) {
+    return Array.from(container.querySelectorAll('.tile-media')).filter(el => {
+      const wrap = el.closest('.tile');
+      return wrap && !wrap.hidden;
+    }).map(el => ({
+      media: el.dataset.media || '',
+      kind: el.dataset.kind || 'image'
+    }));
+  }
+
+  [grid, pGrid].forEach(container => {
+    container.addEventListener('click', (e) => {
+      const media = e.target.closest('.tile-media');
+      if (!media) return;
+      const list = collectVisible(container);
+      const idx = list.findIndex(x => x.media === (media.dataset.media || '') && x.kind === (media.dataset.kind || 'image'));
+      openLightbox(list, idx >= 0 ? idx : 0);
+    });
+  });
+  if (featured) {
+    featured.querySelector('.featured').addEventListener('click', () => {
+      const el = featured.querySelector('.featured');
+      openLightbox([{media: el.dataset.media || '', kind: el.dataset.kind || 'image'}], 0);
+    });
+  }
+
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+  lbPrev.addEventListener('click', () => openLightbox(currentList, currentIdx - 1));
+  lbNext.addEventListener('click', () => openLightbox(currentList, currentIdx + 1));
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') openLightbox(currentList, currentIdx - 1);
+    if (e.key === 'ArrowRight') openLightbox(currentList, currentIdx + 1);
+  });
+
+  document.querySelectorAll('.tile-media').forEach(el => {
+    const vid = el.querySelector('video');
+    if (vid) {
+      el.addEventListener('mouseenter', () => vid.play().catch(()=>{}));
+      el.addEventListener('mouseleave', () => { vid.pause(); vid.currentTime = 0; });
+    }
+  });
+})();
+</script>
+</body>
+</html>
