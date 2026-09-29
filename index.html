@@ -86,8 +86,25 @@
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .brands-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--muted); text-align: center; margin-bottom: 24px; }
-  .brands-row { display: flex; flex-wrap: wrap; justify-content: center;
-    align-items: center; gap: 32px 48px; }
+  .brands-row {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .brands-track {
+    display: flex; align-items: center; gap: 48px;
+    width: max-content;
+    animation: brands-marquee 40s linear infinite;
+  }
+  .brands-track:hover { animation-play-state: paused; }
+  @keyframes brands-marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .brands-track { animation: none; justify-content: center; flex-wrap: wrap; width: 100%; }
+    .brands-row { mask-image: none; -webkit-mask-image: none; }
+  }
   .brand-logo { font-weight: 700; font-size: 15px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--ink-soft); opacity: 0.85;
     transition: opacity .2s; }
@@ -244,23 +261,36 @@
 
   <div class="headline-row">
     <h1 class="title">Selected work<em>.</em></h1>
-    <p class="subhead">Cinematic commercial work — hospitality, lifestyle and real estate. Directed, shot and cut by Pauls Kurzemnieks, Riga.</p>
+    <p class="subhead">Work I've made for hospitality, lifestyle and real estate brands.</p>
   </div>
 
   <section class="brands">
     <div class="brands-label">Brands created for</div>
     <div class="brands-row">
-      <span class="brand-logo">WESS Select</span>
-      <span class="brand-logo">myfitness</span>
-      <span class="brand-logo">Pie&nbsp;galda!</span>
-      <span class="brand-logo">Enliven</span>
-      <span class="brand-logo">Compensa</span>
-      <span class="brand-logo">Ring Baltic</span>
-      <span class="brand-logo">TAPT</span>
-      <span class="brand-logo">Verum</span>
-      <span class="brand-logo">LemonGym</span>
-      <span class="brand-logo">Toyota</span>
-      <span class="brand-logo">Volburg</span>
+      <div class="brands-track" aria-label="Brands created for" role="marquee">
+        <span class="brand-logo">WESS Select</span>
+        <span class="brand-logo">myfitness</span>
+        <span class="brand-logo">Pie&nbsp;galda!</span>
+        <span class="brand-logo">Enliven</span>
+        <span class="brand-logo">Compensa</span>
+        <span class="brand-logo">Ring Baltic</span>
+        <span class="brand-logo">TAPT</span>
+        <span class="brand-logo">Verum</span>
+        <span class="brand-logo">LemonGym</span>
+        <span class="brand-logo">Toyota</span>
+        <span class="brand-logo">Volburg</span>
+        <span class="brand-logo" aria-hidden="true">WESS Select</span>
+        <span class="brand-logo" aria-hidden="true">myfitness</span>
+        <span class="brand-logo" aria-hidden="true">Pie&nbsp;galda!</span>
+        <span class="brand-logo" aria-hidden="true">Enliven</span>
+        <span class="brand-logo" aria-hidden="true">Compensa</span>
+        <span class="brand-logo" aria-hidden="true">Ring Baltic</span>
+        <span class="brand-logo" aria-hidden="true">TAPT</span>
+        <span class="brand-logo" aria-hidden="true">Verum</span>
+        <span class="brand-logo" aria-hidden="true">LemonGym</span>
+        <span class="brand-logo" aria-hidden="true">Toyota</span>
+        <span class="brand-logo" aria-hidden="true">Volburg</span>
+      </div>
     </div>
   </section>
 
