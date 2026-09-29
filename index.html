@@ -105,10 +105,24 @@
     .brands-track { animation: none; justify-content: center; flex-wrap: wrap; width: 100%; }
     .brands-row { mask-image: none; -webkit-mask-image: none; }
   }
-  .brand-logo { font-weight: 700; font-size: 15px; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--ink-soft); opacity: 0.85;
-    transition: opacity .2s; }
+  .brand-logo {
+    display: inline-flex; align-items: center;
+    height: 36px; flex: 0 0 auto;
+    opacity: 0.75;
+    transition: opacity .2s;
+  }
   .brand-logo:hover { opacity: 1; }
+  .brand-logo img {
+    height: 100%; width: auto; max-width: 160px;
+    object-fit: contain; display: block;
+    filter: grayscale(1) contrast(0.9);
+    transition: filter .3s;
+  }
+  .brand-logo:hover img { filter: grayscale(0) contrast(1); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .brand-logo img { filter: grayscale(1) brightness(0) invert(1) opacity(0.8); }
+    :root:not([data-theme="light"]) .brand-logo:hover img { filter: grayscale(0) brightness(1) invert(0) opacity(1); }
+  }
 
   .filters { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 24px;
     border-bottom: 1px solid var(--line); margin-bottom: 40px; }
@@ -268,28 +282,28 @@
     <div class="brands-label">Brands created for</div>
     <div class="brands-row">
       <div class="brands-track" aria-label="Brands created for" role="marquee">
-        <span class="brand-logo">WESS Select</span>
-        <span class="brand-logo">myfitness</span>
-        <span class="brand-logo">Pie&nbsp;galda!</span>
-        <span class="brand-logo">Enliven</span>
-        <span class="brand-logo">Compensa</span>
-        <span class="brand-logo">Ring Baltic</span>
-        <span class="brand-logo">TAPT</span>
-        <span class="brand-logo">Verum</span>
-        <span class="brand-logo">LemonGym</span>
-        <span class="brand-logo">Toyota</span>
-        <span class="brand-logo">Volburg</span>
-        <span class="brand-logo" aria-hidden="true">WESS Select</span>
-        <span class="brand-logo" aria-hidden="true">myfitness</span>
-        <span class="brand-logo" aria-hidden="true">Pie&nbsp;galda!</span>
-        <span class="brand-logo" aria-hidden="true">Enliven</span>
-        <span class="brand-logo" aria-hidden="true">Compensa</span>
-        <span class="brand-logo" aria-hidden="true">Ring Baltic</span>
-        <span class="brand-logo" aria-hidden="true">TAPT</span>
-        <span class="brand-logo" aria-hidden="true">Verum</span>
-        <span class="brand-logo" aria-hidden="true">LemonGym</span>
-        <span class="brand-logo" aria-hidden="true">Toyota</span>
-        <span class="brand-logo" aria-hidden="true">Volburg</span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/6c3d03_04a7fa557e21425e94fddcfe6abebd8c_mv2.avif" alt="Brand" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/spice_logo.png" alt="Spice" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/new_select_bmw.jpg" alt="WESS Select" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/myfitnesslogo-2-1.jpg" alt="myfitness" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/top-logo-big2.png" alt="Brand" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/Enliven_logo__violet.png" alt="Enliven" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/Compensa_colour.png" alt="Compensa" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/RingBalticLogo.png" alt="Ring Baltic" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/logomelns-1024x598.png" alt="Brand" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/images.jpg" alt="Brand" loading="lazy"></span>
+        <span class="brand-logo"><img src="https://realpaulzy.com/cdn/shop/files/toyota-seeklogo.png" alt="Toyota" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/6c3d03_04a7fa557e21425e94fddcfe6abebd8c_mv2.avif" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/spice_logo.png" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/new_select_bmw.jpg" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/myfitnesslogo-2-1.jpg" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/top-logo-big2.png" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/Enliven_logo__violet.png" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/Compensa_colour.png" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/RingBalticLogo.png" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/logomelns-1024x598.png" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/images.jpg" alt="" loading="lazy"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="https://realpaulzy.com/cdn/shop/files/toyota-seeklogo.png" alt="" loading="lazy"></span>
       </div>
     </div>
   </section>
