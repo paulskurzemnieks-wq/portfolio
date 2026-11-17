@@ -10,32 +10,34 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap">
 <style>
   :root {
-    --bg: #FFFFFF;
-    --bg-elev: #F7F7F5;
-    --ink: #111111;
-    --ink-soft: rgba(0,0,0,0.81);
-    --muted: rgba(0,0,0,0.55);
-    --line: #EAEAEA;
-    --line-strong: #CFCFCF;
+    --bg: #EDEAE3;
+    --bg-elev: #E5E1D8;
+    --ink: #2A2A27;
+    --ink-soft: rgba(42,42,39,0.82);
+    --muted: rgba(42,42,39,0.55);
+    --line: #D9D5CB;
+    --line-strong: #B9BCA8;
+    --accent: #7E846B;
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --serif: "Playfair Display", "GT Sectra", Georgia, serif;
     --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0B0B0B; --bg-elev: #131313;
-      --ink: #F5F5F5; --ink-soft: rgba(255,255,255,0.85); --muted: rgba(255,255,255,0.55);
-      --line: #1E1E1E; --line-strong: #333333;
+      --bg: #2A2A27; --bg-elev: #32322F;
+      --ink: #EDEAE3; --ink-soft: rgba(237,234,227,0.86); --muted: rgba(237,234,227,0.55);
+      --line: #3A3A36; --line-strong: #4D4D47;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0B0B0B; --bg-elev: #131313;
-    --ink: #F5F5F5; --ink-soft: rgba(255,255,255,0.85); --muted: rgba(255,255,255,0.55);
-    --line: #1E1E1E; --line-strong: #333333;
+    --bg: #2A2A27; --bg-elev: #32322F;
+    --ink: #EDEAE3; --ink-soft: rgba(237,234,227,0.86); --muted: rgba(237,234,227,0.55);
+    --line: #3A3A36; --line-strong: #4D4D47;
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -66,7 +68,7 @@
   .nav-links a { color: var(--ink-soft); text-decoration: none;
     font-size: 13px; letter-spacing: 0.02em; padding: 4px 0;
     border-bottom: 1px solid transparent; transition: border-color .2s, color .2s; }
-  .nav-links a:hover, .nav-links a.active { color: var(--ink); border-bottom-color: var(--ink); }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); border-bottom-color: var(--accent); }
   .nav-cta {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 10px 18px;
@@ -87,13 +89,13 @@
   .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em;
     text-transform: uppercase; color: var(--muted);
     display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
-  .eyebrow .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--ink); }
+  .eyebrow .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent); }
 
   .headline-row { display: grid; grid-template-columns: 1fr 320px; gap: 40px;
     align-items: end; margin-bottom: 40px; }
   h1.title { font-weight: 800; font-size: clamp(48px, 7.5vw, 96px);
     line-height: 0.98; letter-spacing: -0.035em; margin: 0; text-wrap: balance; }
-  h1.title em { font-style: normal; color: var(--muted); font-weight: 800; }
+  h1.title em { font-family: var(--serif); font-style: italic; color: var(--accent); font-weight: 500; }
   .subhead { color: var(--muted); font-size: 14px; line-height: 1.55;
     max-width: 32ch; justify-self: end; margin: 0; }
 
@@ -146,7 +148,7 @@
     border: 1px solid var(--line-strong); border-radius: 999px;
     padding: 10px 16px; cursor: pointer;
     transition: background .18s, color .18s, border-color .18s; }
-  .chip:hover { border-color: var(--ink); color: var(--ink); }
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
   .chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .count { margin-left: auto; align-self: center; font: 400 12px var(--mono);
     color: var(--muted); letter-spacing: 0.06em; }
@@ -224,7 +226,7 @@
   .cta { margin-top: 80px; text-align: center; padding: 64px 24px; }
   .cta h2 { font-weight: 800; font-size: clamp(32px, 4.5vw, 56px);
     line-height: 1; letter-spacing: -0.035em; margin: 0 0 20px; }
-  .cta h2 em { font-style: normal; color: var(--muted); font-weight: 800; }
+  .cta h2 em { font-family: var(--serif); font-style: italic; color: var(--accent); font-weight: 500; }
   .cta p { max-width: 44ch; margin: 0 auto 32px; color: var(--muted);
     font-size: 14px; line-height: 1.55; }
   .cta-btn { display: inline-flex; align-items: center; gap: 12px;
@@ -317,6 +319,9 @@
         <span class="brand-logo"><img src="logos/png/brand-09.png" alt="Brand" loading="eager" fetchpriority="high" decoding="async"></span>
         <span class="brand-logo"><img src="logos/png/brand-10.png" alt="Brand" loading="eager" fetchpriority="high" decoding="async"></span>
         <span class="brand-logo"><img src="logos/png/toyota.png" alt="Toyota" loading="eager" fetchpriority="high" decoding="async"></span>
+        <span class="brand-logo"><img src="logos/png/elevenlabs.png" alt="ElevenLabs" loading="eager" fetchpriority="high" decoding="async"></span>
+        <span class="brand-logo"><img src="logos/png/mirage.svg" alt="Mirage" loading="eager" fetchpriority="high" decoding="async"></span>
+        <span class="brand-logo"><img src="logos/png/brite.svg" alt="Brite" loading="eager" fetchpriority="high" decoding="async"></span>
         <span class="brand-logo" aria-hidden="true"><img src="logos/png/brand-01.png" alt="" loading="lazy" decoding="async"></span>
         <span class="brand-logo" aria-hidden="true"><img src="logos/png/brand-02.png" alt="" loading="lazy" decoding="async"></span>
         <span class="brand-logo" aria-hidden="true"><img src="logos/png/pure.png" alt="" loading="lazy" decoding="async"></span>
@@ -329,6 +334,9 @@
         <span class="brand-logo" aria-hidden="true"><img src="logos/png/brand-09.png" alt="" loading="lazy" decoding="async"></span>
         <span class="brand-logo" aria-hidden="true"><img src="logos/png/brand-10.png" alt="" loading="lazy" decoding="async"></span>
         <span class="brand-logo" aria-hidden="true"><img src="logos/png/toyota.png" alt="" loading="lazy" decoding="async"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="logos/png/elevenlabs.png" alt="" loading="lazy" decoding="async"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="logos/png/mirage.svg" alt="" loading="lazy" decoding="async"></span>
+        <span class="brand-logo" aria-hidden="true"><img src="logos/png/brite.svg" alt="" loading="lazy" decoding="async"></span>
       </div>
     </div>
   </section>
